@@ -12,6 +12,9 @@
         android:theme="@style/Theme.SNav"
         tools:targetApi="29">
         <activity
+            android:name=".MainNavSearchActivity"
+            android:exported="false" />
+        <activity
             android:name=".RouteSearchResultActivity"
             android:exported="false" />
         <activity

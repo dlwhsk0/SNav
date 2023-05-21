@@ -4,32 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainNavSurroundActivity">
+    tools:context=".MainNavSearchActivity">
 
     <RelativeLayout
         android:id="@+id/android_lar"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:background="@drawable/main_nav_surround"
+        android:background="@drawable/main_nav_search"
         android:clipToOutline="true"
         app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="MissingConstraints,RedundantNamespace,UnusedAttribute">
 
-        <ImageView
-            android:id="@+id/mananiv"
-            android:layout_width="261dp"
-            android:layout_height="81dp"
-            android:layout_marginLeft="70dp"
-            android:layout_marginTop="550dp"
-            app:srcCompat="@drawable/manan" />
-
-        <ImageView
-            android:id="@+id/univiv"
-            android:layout_width="277dp"
-            android:layout_height="81dp"
-            android:layout_marginLeft="70dp"
-            android:layout_marginTop="700dp"
-            app:srcCompat="@drawable/univ" />
 
     </RelativeLayout>
 
