@@ -1,7 +1,4 @@
 <resources>
     <string name="app_name">SNav</string>
 
-    <string name="some_id">3초 로그인</string>
-
-    <string name="kakaostr">카카오\n로그인</string>
 </resources>
