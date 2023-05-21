@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/android_lar"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/login"
+        android:clipToOutline="true"
+        tools:ignore="MissingConstraints,RedundantNamespace,UnusedAttribute">
+
+        <Button
+            android:id="@+id/kakaobtn"
+            android:layout_width="158dp"
+            android:layout_height="178dp"
+            android:layout_marginLeft="41dp"
+            android:layout_marginTop="224dp"
+            android:background="#00ff0000" />
+
+        <Button
+            android:id="@+id/facebookbtn"
+            android:layout_width="158dp"
+            android:layout_height="178dp"
+            android:layout_marginLeft="209dp"
+            android:layout_marginTop="224dp"
+            android:background="#00ff0000" />
+
+        <Button
+            android:id="@+id/naverbtn"
+            android:layout_width="158dp"
+            android:layout_height="178dp"
+            android:layout_marginLeft="209dp"
+            android:layout_marginTop="415dp"
+            android:background="#00ff0000" />
+
+        <Button
+            android:id="@+id/googlebtn"
+            android:layout_width="158dp"
+            android:layout_height="178dp"
+            android:layout_marginLeft="41dp"
+            android:layout_marginTop="415dp"
+            android:background="#00ff0000" />
+
+        <Button
+            android:id="@+id/guestbtn"
+            android:layout_width="328dp"
+            android:layout_height="78dp"
+            android:layout_marginLeft="42dp"
+            android:layout_marginTop="605dp"
+            android:background="#00ff0000" />
+    </RelativeLayout>
+
+
+</LinearLayout>
