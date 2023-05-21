@@ -12,6 +12,9 @@
         android:theme="@style/Theme.SNav"
         tools:targetApi="29">
         <activity
+            android:name=".activity_main_nav"
+            android:exported="false" />
+        <activity
             android:name=".NavDetailedActivity"
             android:exported="false" />
         <activity
