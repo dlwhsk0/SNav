@@ -16,7 +16,7 @@
   - 로그인 화면 (activity_login.xml)
   - 사용자 정보 및 설정 화면 (activity_setting.xml)
 
-### To-do
+## To-do
 
 - 지도 첨부 (activity_main_nav.xml) 및 동적 기능 구현
 - 주소 및 건물 검색 화면이 누락됨 (길찾기 검색 X)
