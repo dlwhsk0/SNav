@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainNavActivity">
+    tools:context=".MainNavMenuActivity">
 
     <RelativeLayout
         android:id="@+id/android_lar"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:background="@drawable/main_nav"
+        android:background="@drawable/main_nav_menu"
         android:clipToOutline="true"
         app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="MissingConstraints,RedundantNamespace,UnusedAttribute">

@@ -12,7 +12,25 @@
         android:theme="@style/Theme.SNav"
         tools:targetApi="29">
         <activity
-            android:name=".activity_main_nav"
+            android:name=".RouteSearchResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RouteSearchActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NavShortActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainNavSurroundActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainNavFavoriteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainNavMenuActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainNavActivity"
             android:exported="false" />
         <activity
             android:name=".NavDetailedActivity"
