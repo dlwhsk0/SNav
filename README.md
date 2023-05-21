@@ -19,10 +19,12 @@
 ## To-do
 
 - 지도 첨부 (activity_main_nav.xml) 및 동적 기능 구현
-- 사용자 정보 및 설정 화면으로 전환되는 UI 누락됨
 
 ## 구현 외 할 일
 
 - 모든 화면 간의 관계도 제작
 - 보고서 작성
 - 발표 영상 제작 및 제출
+
+## 화면 구성도
+<img width="910" alt="image" src="https://github.com/dlwhsk0/SNav/assets/94193594/f1795832-aa09-4401-b6e1-6aed9d89a075">
