@@ -1,24 +1,27 @@
 package com.sku.snav;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button loginCheck, settingCheck;
+    Button loginCheck, settingCheck, introCheck;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Intent intent = new Intent(getApplicationContext(), IntroActivity.class);
+        startActivity(intent);
+
         loginCheck = (Button) findViewById(R.id.logincheck);
         settingCheck = (Button) findViewById(R.id.settingcheck);
+        introCheck = (Button) findViewById(R.id.introcheck);
 
         loginCheck.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,6 +35,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), SettingActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        introCheck.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), IntroActivity.class);
                 startActivity(intent);
             }
         });

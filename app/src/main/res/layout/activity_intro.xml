@@ -13,6 +13,7 @@
         android:background="@drawable/intro"
         android:clipToOutline="true"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:ignore="MissingConstraints,RedundantNamespace,UnusedAttribute"></RelativeLayout>
+        tools:ignore="MissingConstraints,RedundantNamespace,UnusedAttribute"
+        tools:layout_editor_absoluteY="0dp"></RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

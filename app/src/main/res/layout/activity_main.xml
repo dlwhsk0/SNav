@@ -24,10 +24,10 @@
         android:text="설정 창" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/introcheck"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_margin="20dp"
         android:backgroundTint="#10A558"
-        android:text="Button" />
+        android:text="인트로 창" />
 </LinearLayout>
