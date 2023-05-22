@@ -12,6 +12,15 @@
         android:theme="@style/Theme.SNav"
         tools:targetApi="29">
         <activity
+            android:name=".SettingSoundActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SettingNoticeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SettingThemeActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainNavSearchActivity"
             android:exported="false" />
         <activity
@@ -40,8 +49,7 @@
             android:exported="false" />
         <activity
             android:name=".IntroActivity"
-            android:exported="false" >
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

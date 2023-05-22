@@ -17,11 +17,11 @@
 
         <Button
             android:id="@+id/startbtn"
-            android:layout_width="372dp"
+            android:layout_width="370dp"
             android:layout_height="100dp"
             android:layout_marginTop="612dp"
             android:layout_marginLeft="18dp"
-            android:background="#00ff0000" />
+            android:background="#00ff0000"/>
 
 
     </RelativeLayout>
