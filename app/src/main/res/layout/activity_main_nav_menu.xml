@@ -15,6 +15,37 @@
         app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="MissingConstraints,RedundantNamespace,UnusedAttribute">
 
+        <Button
+            android:id="@+id/routebtn"
+            android:layout_width="292dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="365dp"
+            android:layout_marginLeft="60dp"
+            android:background="#00ff0000" />
+
+        <Button
+            android:id="@+id/surbtn"
+            android:layout_width="292dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="450dp"
+            android:layout_marginLeft="60dp"
+            android:background="#00ff0000" />
+
+        <Button
+            android:id="@+id/favbtn"
+            android:layout_width="292dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="535dp"
+            android:layout_marginLeft="60dp"
+            android:background="#00ff0000" />
+
+        <Button
+            android:id="@+id/setbtn"
+            android:layout_width="294dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="618dp"
+            android:layout_marginLeft="59dp"
+            android:background="#00ff0000" />
 
     </RelativeLayout>
 
