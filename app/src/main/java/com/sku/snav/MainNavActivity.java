@@ -9,15 +9,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainNavActivity extends AppCompatActivity {
 
-    Button startBtn;
+    Button menuBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_nav);
 
-        startBtn = (Button) findViewById(R.id.startbtn);
-        startBtn.setOnClickListener(new View.OnClickListener() {
+        menuBtn = (Button) findViewById(R.id.menubtn);
+        menuBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), MainNavMenuActivity.class);

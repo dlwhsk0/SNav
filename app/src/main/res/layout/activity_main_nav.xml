@@ -16,7 +16,7 @@
         tools:ignore="MissingConstraints,RedundantNamespace,UnusedAttribute">
 
         <Button
-            android:id="@+id/startbtn"
+            android:id="@+id/menubtn"
             android:layout_width="370dp"
             android:layout_height="100dp"
             android:layout_marginTop="612dp"

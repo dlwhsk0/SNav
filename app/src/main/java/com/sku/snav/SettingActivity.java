@@ -1,8 +1,7 @@
 package com.sku.snav;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -35,6 +34,8 @@ public class SettingActivity extends Activity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getApplicationContext(),"공지사항 창으로 이동합니다.",Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(), SettingNoticeActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -42,13 +43,15 @@ public class SettingActivity extends Activity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getApplicationContext(),"소리 설정 창으로 이동합니다.",Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(), SettingSoundActivity.class);
+                startActivity(intent);
             }
         });
 
         alarmBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(),"알림 설정 창으로 이동합니다.",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),"시스템 설정 창으로 이동합니다.",Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -56,13 +59,15 @@ public class SettingActivity extends Activity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getApplicationContext(),"테마 설정 창으로 이동합니다.",Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(), SettingThemeActivity.class);
+                startActivity(intent);
             }
         });
 
         centerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(),"고객 센터 창으로 이동합니다.",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),"고객 센터 사이트로 이동합니다.",Toast.LENGTH_SHORT).show();
             }
         });
     }
