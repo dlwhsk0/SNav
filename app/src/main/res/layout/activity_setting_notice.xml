@@ -4,15 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".IntroActivity">
+    tools:context=".SettingNoticeActivity">
 
     <RelativeLayout
         android:id="@+id/android_lar"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:background="@drawable/intro"
+        android:background="@drawable/setting_notice"
         android:clipToOutline="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:ignore="MissingConstraints,RedundantNamespace,UnusedAttribute"></RelativeLayout>
+        tools:ignore="MissingConstraints,RedundantNamespace,UnusedAttribute">
+
+        <Button
+            android:id="@+id/backbtn"
+            android:layout_width="360dp"
+            android:layout_height="62dp"
+            android:layout_marginLeft="26dp"
+            android:layout_marginTop="715dp"
+            android:background="#00ff0000" />
+
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
