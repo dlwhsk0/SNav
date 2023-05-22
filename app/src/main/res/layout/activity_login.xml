@@ -34,7 +34,7 @@
             android:id="@+id/naverbtn"
             android:layout_width="158dp"
             android:layout_height="178dp"
-            android:layout_marginLeft="209dp"
+            android:layout_marginLeft="41dp"
             android:layout_marginTop="415dp"
             android:background="#00ff0000" />
 
@@ -42,7 +42,7 @@
             android:id="@+id/googlebtn"
             android:layout_width="158dp"
             android:layout_height="178dp"
-            android:layout_marginLeft="41dp"
+            android:layout_marginLeft="209dp"
             android:layout_marginTop="415dp"
             android:background="#00ff0000" />
 
