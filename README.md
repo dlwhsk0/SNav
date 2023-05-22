@@ -13,7 +13,6 @@
 - figma 도구를 사용해 앱 화면 구성 설계
 - 1차적으로 모든 화면을 벡터 이미지로 첨부 (❗변경 필요)
 - 동적 기능이 필요하지 않은 화면은 벡터 이미지로 첨부 후 필요한 곳에 투명 버튼 배치
-
   - 사용자 정보 및 설정 화면 (activity_setting.xml)
     - 공지사항 (activity_setting_notice.xml)
     - 음성 설정 (activity_setting_sound.xml)
@@ -26,6 +25,7 @@
     - 공지사항 (activity_setting_notice.xml)
     - 음성 설정 (activity_setting_sound.xml)
     - 테마 설정 (activity_setting_theme.xml)
+  - 인트로 화면 가장자리에 흰색이 보이는 문제 해결
 
 ## To-do
 
