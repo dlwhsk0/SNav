@@ -13,8 +13,15 @@
 - figma 도구를 사용해 앱 화면 구성 설계
 - 1차적으로 모든 화면을 벡터 이미지로 첨부 (❗변경 필요)
 - 동적 기능이 필요하지 않은 화면은 벡터 이미지로 첨부 후 필요한 곳에 투명 버튼 배치
-  - 인트로 화면 (activity_intro.xml)
-  - 로그인 화면 (activity_login.xml)
+
+  - 사용자 정보 및 설정 화면 (activity_setting.xml)
+    - 공지사항 (activity_setting_notice.xml)
+    - 음성 설정 (activity_setting_sound.xml)
+    - 테마 설정 (activity_setting_theme.xml)
+
+## 2023-05-22 ~ 23
+
+- (추가) 동적 기능이 필요하지 않은 화면은 벡터 이미지로 첨부 후 필요한 곳에 투명 버튼 배치
   - 사용자 정보 및 설정 화면 (activity_setting.xml)
     - 공지사항 (activity_setting_notice.xml)
     - 음성 설정 (activity_setting_sound.xml)
@@ -23,7 +30,7 @@
 ## To-do
 
 - 지도 첨부 (activity_main_nav.xml) 및 동적 기능 구현
-- 음성 신호기가 있는 횡단보도 아이콘 배치
+- 음성 신호기가 있는 횡단보도 아이콘 배치 (M)
 
 ## 구현 외 할 일
 
