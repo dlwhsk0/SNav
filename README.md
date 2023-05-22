@@ -25,7 +25,7 @@
     - 공지사항 (activity_setting_notice.xml)
     - 음성 설정 (activity_setting_sound.xml)
     - 테마 설정 (activity_setting_theme.xml)
-  - 인트로 화면 가장자리에 흰색이 보이는 문제 해결
+- 인트로 화면 가장자리에 흰색이 보이는 문제 해결
 
 ## To-do
 
