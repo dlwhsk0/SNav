@@ -21,15 +21,11 @@
 
 ## 2023-05-22 ~ 23
 
-- (추가) 동적 기능이 필요하지 않은 화면은 벡터 이미지로 첨부 후 필요한 곳에 투명 버튼 배치
-  - 사용자 정보 및 설정 화면 (activity_setting.xml)
-    - 공지사항 (activity_setting_notice.xml)
-    - 음성 설정 (activity_setting_sound.xml)
-    - 테마 설정 (activity_setting_theme.xml)
 - 인트로 화면 가장자리에 흰색이 보이는 문제 해결
 - 설정 관련 화면 5개 추가
   - 세부 설정 화면 3개
   - 테마 미리보기 버전 2개
+- 런처 화면을 IntroActivity로 변경
 
 ## To-do
 
