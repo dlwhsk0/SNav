@@ -10,7 +10,7 @@
 
 ## 2023-05-21
 
-- 12 개의 화면 제작 (MainActivity.java , Activity_main.xml : 임시 화면 전환 테스트 용)
+- 12개의 화면 제작 (MainActivity.java , Activity_main.xml : 임시 화면 전환 테스트 용)
 - figma 도구를 사용해 앱 화면 구성 설계
 - 1차적으로 모든 화면을 벡터 이미지로 첨부 (❗변경 필요)
 - 동적 기능이 필요하지 않은 화면은 벡터 이미지로 첨부 후 필요한 곳에 투명 버튼 배치
@@ -27,7 +27,7 @@
     - 음성 설정 (activity_setting_sound.xml)
     - 테마 설정 (activity_setting_theme.xml)
 - 인트로 화면 가장자리에 흰색이 보이는 문제 해결
-- 설정 관련 화면 3개 추가
+- 설정 관련 화면 5개 추가 => 총 17개의 화면
 
 ## To-do
 
