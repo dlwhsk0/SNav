@@ -7,27 +7,4 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/logincheck"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_margin="20dp"
-        android:backgroundTint="#C823C0"
-        android:text="로그인 창" />
-
-    <Button
-        android:id="@+id/settingcheck"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_margin="20dp"
-        android:backgroundTint="#DDB930"
-        android:text="설정 창" />
-
-    <Button
-        android:id="@+id/introcheck"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_margin="20dp"
-        android:backgroundTint="#10A558"
-        android:text="인트로 창" />
 </LinearLayout>
