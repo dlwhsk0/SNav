@@ -48,4 +48,4 @@
 
 ## 화면 구성도
 
-<img width="920" alt="image" src="https://github.com/dlwhsk0/SNav/assets/94193594/c0a5e7be-ea57-430c-b2b9-e9c76bf9fa7a">
+<img width="726" alt="image" src="https://github.com/dlwhsk0/SNav/assets/94193594/98ae4a1b-ed1f-409a-bf09-437dec66860c">
