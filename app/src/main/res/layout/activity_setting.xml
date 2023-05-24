@@ -12,7 +12,7 @@
         android:background="@drawable/setting" >
 
         <Button
-            android:id="@+id/btnuser"
+            android:id="@+id/profilebtn"
             android:layout_width="350dp"
             android:layout_height="110dp"
             android:layout_marginTop="130dp"
@@ -20,7 +20,7 @@
             android:background="#00ff0000" />
 
         <Button
-            android:id="@+id/btnnotice"
+            android:id="@+id/noticebtn"
             android:layout_width="160dp"
             android:layout_height="160dp"
             android:layout_marginTop="265dp"
@@ -28,7 +28,7 @@
             android:background="#00ff0000" />
 
         <Button
-            android:id="@+id/btnsound"
+            android:id="@+id/soundbtn"
             android:layout_width="160dp"
             android:layout_height="160dp"
             android:layout_marginTop="265dp"
@@ -36,7 +36,7 @@
             android:background="#00ff0000" />
 
         <Button
-            android:id="@+id/btnarl"
+            android:id="@+id/alarmbtn"
             android:layout_width="160dp"
             android:layout_height="160dp"
             android:layout_marginTop="448dp"
@@ -44,7 +44,7 @@
             android:background="#00ff0000" />
 
         <Button
-            android:id="@+id/btntheme"
+            android:id="@+id/themebtn"
             android:layout_width="160dp"
             android:layout_height="160dp"
             android:layout_marginTop="448dp"
@@ -52,7 +52,7 @@
             android:background="#00ff0000" />
 
         <Button
-            android:id="@+id/btncall"
+            android:id="@+id/centerbtn"
             android:layout_width="340dp"
             android:layout_height="60dp"
             android:layout_marginTop="630dp"
