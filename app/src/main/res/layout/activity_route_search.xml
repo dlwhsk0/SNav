@@ -15,6 +15,57 @@
         app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="MissingConstraints,RedundantNamespace,UnusedAttribute">
 
+        <EditText
+            android:id="@+id/started"
+            android:layout_width="330dp"
+            android:layout_height="91dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="54dp"
+            android:hint="현위치: 경기 안양시 만안구 안양동 400-10"
+            android:inputType="textMultiLine"
+            android:textColorHint="#eaeaea"
+            android:textSize="30dp"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:background="@null" />
+
+        <EditText
+            android:id="@+id/finished"
+            android:layout_width="330dp"
+            android:layout_height="91dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="207dp"
+            android:inputType="textPersonName"
+            android:hint="도착지 입력"
+            android:textColorHint="#eaeaea"
+            android:textSize="35dp"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:background="@null" />
+
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="372dp"
+            android:layout_height="129dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="330dp"
+            android:background="#00ff0000" />
+
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="372dp"
+            android:layout_height="129dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="480dp"
+            android:background="#00ff0000" />
+
+        <Button
+            android:id="@+id/btn3"
+            android:layout_width="372dp"
+            android:layout_height="129dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="630dp"
+            android:background="#00ff0000" />
 
     </RelativeLayout>
 

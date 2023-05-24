@@ -12,9 +12,11 @@
         android:theme="@style/Theme.SNav"
         tools:targetApi="29">
         <activity
+            android:name=".ThemePreviewActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".IntroActivity"
             android:exported="true">
