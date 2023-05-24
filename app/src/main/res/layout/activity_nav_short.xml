@@ -32,6 +32,7 @@
             android:background="#00ff0000" />
 
         <Button
+            android:id="@+id/detailnavbtn"
             android:layout_width="350dp"
             android:layout_height="75dp"
             android:layout_marginTop="670dp"
