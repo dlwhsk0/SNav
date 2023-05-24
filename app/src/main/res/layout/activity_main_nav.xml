@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainNavActivity">
 
     <RelativeLayout
@@ -12,18 +13,23 @@
         android:layout_height="fill_parent"
         android:background="@drawable/main_nav"
         android:clipToOutline="true"
-        app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="MissingConstraints,RedundantNamespace,UnusedAttribute">
+
+        <Button
+            android:id="@+id/searchbtn"
+            android:layout_width="284dp"
+            android:layout_height="94dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginLeft="98dp"
+            android:background="#00ff0000" />
 
         <Button
             android:id="@+id/menubtn"
             android:layout_width="370dp"
-            android:layout_height="100dp"
-            android:layout_marginTop="612dp"
+            android:layout_height="113dp"
             android:layout_marginLeft="18dp"
-            android:background="#00ff0000"/>
-
-
+            android:layout_marginTop="690dp"
+            android:background="#00ff0000" />
     </RelativeLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
