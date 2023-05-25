@@ -10,31 +10,101 @@
         android:background="@drawable/setting_theme" >
 
         <Button
-            android:layout_width="355dp"
+            android:layout_width="361dp"
             android:layout_height="100dp"
-            android:layout_marginTop="60dp"
-            android:layout_marginLeft="25dp"
+            android:layout_marginTop="62dp"
+            android:layout_marginLeft="24dp"
+            android:background="#00ff0000" />
+
+        <ImageView
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginLeft="42dp"
+            android:layout_marginTop="84dp"
+            android:background="#00ff0000" />
+
+        <TextView
+            android:layout_width="146dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="90dp"
             android:background="#00ff0000" />
 
         <Button
             android:layout_width="360dp"
-            android:layout_height="250dp"
-            android:layout_marginTop="178dp"
+            android:layout_height="248dp"
+            android:layout_marginTop="182dp"
             android:layout_marginLeft="25dp"
             android:background="#00ff0000" />
 
         <Button
-            android:layout_width="355dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="442dp"
-            android:layout_marginLeft="28dp"
+            android:layout_width="345dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="193dp"
+            android:background="#00ff0000" />
+
+        <TextView
+            android:layout_width="189dp"
+            android:layout_height="46dp"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="205dp"
             android:background="#00ff0000" />
 
         <Button
-            android:layout_width="358dp"
-            android:layout_height="66dp"
-            android:layout_marginTop="507dp"
-            android:layout_marginLeft="27dp"
+            android:layout_width="345dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="270dp"
+            android:background="#00ff0000" />
+
+        <TextView
+            android:layout_width="189dp"
+            android:layout_height="46dp"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="283dp"
+            android:background="#00ff0000" />
+
+        <Button
+            android:layout_width="345dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="347dp"
+            android:background="#00ff0000" />
+
+        <TextView
+            android:layout_width="189dp"
+            android:layout_height="46dp"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="360dp"
+            android:background="#00ff0000" />
+
+        <Button
+            android:layout_width="360dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="444dp"
+            android:layout_marginLeft="25dp"
+            android:background="#00ff0000" />
+
+        <TextView
+            android:layout_width="125dp"
+            android:layout_height="38dp"
+            android:layout_marginLeft="142dp"
+            android:layout_marginTop="452dp"
+            android:background="#00ff0000" />
+
+        <Button
+            android:layout_width="360dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="510dp"
+            android:layout_marginLeft="25dp"
+            android:background="#00ff0000" />
+
+        <TextView
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="135dp"
+            android:layout_marginTop="520dp"
             android:background="#00ff0000" />
 
         <Button
@@ -43,6 +113,13 @@
             android:layout_height="68dp"
             android:layout_marginTop="712dp"
             android:layout_marginLeft="26dp"
+            android:background="#00ff0000" />
+
+        <TextView
+            android:layout_width="140dp"
+            android:layout_height="42dp"
+            android:layout_marginLeft="135dp"
+            android:layout_marginTop="725dp"
             android:background="#00ff0000" />
 
     </RelativeLayout>
