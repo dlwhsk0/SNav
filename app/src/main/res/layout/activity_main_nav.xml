@@ -6,16 +6,132 @@
     android:layout_height="match_parent"
     tools:context=".MainNavActivity">
 
-    <RelativeLayout
-        android:id="@+id/android_lar"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:background="@drawable/main_nav"
-        android:clipToOutline="true"
+    <com.skt.Tmap.TMapView
+        android:id="@+id/tmapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/addressLayout"
+        android:layout_width="373dp"
+        android:layout_height="117dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/main_nav_search"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:ignore="MissingConstraints,RedundantNamespace,UnusedAttribute">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/black_lens" />
 
-    </RelativeLayout>
+        <TextView
+            android:id="@+id/edtAddress"
+            android:layout_width="0dp"
+            android:layout_height="95dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:layout_weight="5"
+            android:background="@drawable/gray_address_box"
+            android:gravity="center"
+            android:text="장소 또는 주소를 입력하세요"
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:textSize="34sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/startButton"
+        app:layout_constraintEnd_toEndOf="@+id/startButton"
+        app:layout_constraintStart_toStartOf="@+id/startButton">
+
+        <LinearLayout
+            android:id="@+id/menuLayout"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:visibility="visible">
+
+            <Button
+                android:id="@+id/btnFindRoad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="길 찾기" />
+
+            <Button
+                android:id="@+id/btnFindSurround"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="주변 시설" />
+
+            <Button
+                android:id="@+id/btnFavorite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="즐겨찾기" />
+
+            <Button
+                android:id="@+id/btnSetting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="설정" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/startButton"
+        android:layout_width="351dp"
+        android:layout_height="102dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/purple_box"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/imgArrow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/arrow_up" />
+
+        <TextView
+            android:id="@+id/textStart"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:layout_weight="4"
+            android:text="시작하기"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="34sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnGPSLocation"
+        android:layout_width="61dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="20dp"
+        android:text="위치"
+        app:layout_constraintEnd_toEndOf="@+id/addressLayout"
+        app:layout_constraintTop_toBottomOf="@+id/addressLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
