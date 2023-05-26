@@ -2,7 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <application
+        android:networkSecurityConfig="@xml/security_config"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -12,11 +17,11 @@
         android:theme="@style/Theme.SNav"
         tools:targetApi="29">
         <activity
-            android:name=".ThemePreviewActivity"
+            android:name=".LocationSearchActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:name=".ThemePreviewActivity"
+            android:exported="false" />
         <activity
             android:name=".IntroActivity"
             android:exported="true">
@@ -52,9 +57,6 @@
             android:exported="false" />
         <activity
             android:name=".MainNavFavoriteActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainNavMenuActivity"
             android:exported="false" />
         <activity
             android:name=".MainNavActivity"
