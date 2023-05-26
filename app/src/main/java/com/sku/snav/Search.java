@@ -77,7 +77,7 @@ public class Search {
                     while ((result = br.readLine()) != null) {
                         lines.add(result);
                     }
-                } catch (IOException e) {
+                } catch (IOException ignored) {
                 }
             }
         }.start();
@@ -108,7 +108,7 @@ public class Search {
                     Log.i("TAG", result);
                     String[] arr = result.split("\\s");
                     point[0] = new TMapPoint(Double.parseDouble(arr[0]), Double.parseDouble(arr[1]));
-                } catch (IOException e) {
+                } catch (IOException ignored) {
                 }
             }
         }.start();

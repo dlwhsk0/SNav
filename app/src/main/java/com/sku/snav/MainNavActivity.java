@@ -6,12 +6,8 @@ import android.graphics.BitmapFactory;
 import android.graphics.PointF;
 import android.location.Location;
 import android.os.Bundle;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -26,10 +22,8 @@ import java.util.ArrayList;
 
 public class MainNavActivity extends AppCompatActivity implements TMapGpsManager.onLocationChangedCallback {
     TMapView tMapView;
-    LinearLayout addressLayout, menuLayout, startButton;
-    Button btnFindRoad, btnFindSurround, btnFavorite, btnSetting, btnGPSLocation;
-    ImageView imgArrow;
-    TextView textStart;
+    LinearLayout addressLayout, startButton;
+    Button btnGPSLocation;
     TMapMarkerItem current = new TMapMarkerItem();
 
     boolean gpsLocation = false;
@@ -40,19 +34,8 @@ public class MainNavActivity extends AppCompatActivity implements TMapGpsManager
         setContentView(R.layout.activity_main_nav);
         tMapView = findViewById(R.id.tmapView);
         addressLayout = findViewById(R.id.addressLayout);
-        menuLayout = findViewById(R.id.menuLayout);
-
-        startButton = findViewById(R.id.startButton);
-        btnFindRoad = findViewById(R.id.btnFindRoad);
-        btnFindSurround = findViewById(R.id.btnFindSurround);
-        btnFavorite = findViewById(R.id.btnFavorite);
-        btnSetting = findViewById(R.id.btnSetting);
+        startButton = findViewById(R.id.startMenu);
         btnGPSLocation = findViewById(R.id.btnGPSLocation);
-
-        imgArrow = findViewById(R.id.imgArrow);
-        textStart = findViewById(R.id.textStart);
-
-        menuLayout.setVisibility(View.GONE);
 
         tMapView.setSKTMapApiKey("mcV5vicxQs7YutpqqlYYy4nmHDPwSmpbZbuUWcQg");
 
@@ -62,19 +45,14 @@ public class MainNavActivity extends AppCompatActivity implements TMapGpsManager
 
         tMapView.addMarkerItem("current", current);
 
-        addressLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), LocationSearchActivity.class);
-                startActivityForResult(intent, 0);
-            }
+        addressLayout.setOnClickListener(view -> {
+            Intent intent = new Intent(getApplicationContext(), LocationSearchActivity.class);
+            startActivityForResult(intent, 0);
         });
 
-        btnGPSLocation.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                gpsLocation = true;
-            }
+        btnGPSLocation.setOnClickListener(view -> {
+            gpsLocation = true;
+            tMapView.setTrackingMode(true);
         });
 
         tMapView.setOnClickListenerCallBack(new TMapView.OnClickListenerCallback() {
@@ -91,27 +69,10 @@ public class MainNavActivity extends AppCompatActivity implements TMapGpsManager
             }
         });
 
-        startButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (textStart.getVisibility() == View.VISIBLE) {
-                    menuLayout.setVisibility(View.VISIBLE);
-                    textStart.setVisibility(View.GONE);
-                    ViewGroup.LayoutParams params = startButton.getLayoutParams();
-                    params.height /= 2;
-                    startButton.setLayoutParams(params);
-                    imgArrow.setImageResource(R.drawable.arrow_down);
-                } else {
-                    menuLayout.setVisibility(View.GONE);
-                    textStart.setVisibility(View.VISIBLE);
-                    ViewGroup.LayoutParams params = startButton.getLayoutParams();
-                    params.height *= 2;
-                    startButton.setLayoutParams(params);
-                    imgArrow.setImageResource(R.drawable.arrow_up);
-                }
-            }
+        startButton.setOnClickListener(view -> {
+            Intent intent = new Intent(getApplicationContext(), MainNavMenuActivity.class);
+            startActivity(intent);
         });
-
 
         TMapGpsManager gps = new TMapGpsManager(this);
         gps.setMinTime(1);

@@ -7,12 +7,12 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
-        android:networkSecurityConfig="@xml/security_config"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/security_config"
         android:supportsRtl="true"
         android:theme="@style/Theme.SNav"
         tools:targetApi="29">
@@ -41,9 +41,6 @@
             android:name=".SettingThemeActivity"
             android:exported="false" />
         <activity
-            android:name=".MainNavSearchActivity"
-            android:exported="false" />
-        <activity
             android:name=".RouteSearchResultActivity"
             android:exported="false" />
         <activity
@@ -62,10 +59,15 @@
             android:name=".MainNavActivity"
             android:exported="false" />
         <activity
+            android:name=".MainNavMenuActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SettingActivity"
+            android:exported="false" />
+        <activity
             android:name=".NavDetailedActivity"
             android:exported="false" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".SettingActivity" />
     </application>
 
 </manifest>

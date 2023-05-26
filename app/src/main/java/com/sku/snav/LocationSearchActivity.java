@@ -38,35 +38,32 @@ public class LocationSearchActivity extends AppCompatActivity {
         ArrayAdapter adapter = new ArrayAdapter(Search.getRecentLocationList());
         recentRecyclerView.setAdapter(adapter);
 
-        edtAddress.setOnKeyListener(new View.OnKeyListener() {
-            @Override
-            public boolean onKey(View view, int i, KeyEvent keyEvent) {
-                if (i == KeyEvent.KEYCODE_ENTER || i == KeyEvent.KEYCODE_NUMPAD_ENTER) {
-                    TMapPoint point = null;
-                    try {
-                        point = Search.getPointFromAddress(edtAddress.getText().toString());
-                    } catch (InterruptedException e) {
-                        throw new RuntimeException(e);
-                    }
-
-                    if (point == null) {
-                        Toast.makeText(LocationSearchActivity.this, "Location Not Found", Toast.LENGTH_SHORT).show();
-                        point = new TMapPoint(37.3793938, 126.9277183);
-                    }
-
-                    Intent intent = getIntent();
-                    intent.putExtra("lat", point.getLatitude());
-                    intent.putExtra("lon", point.getLongitude());
-                    setResult(RESULT_OK, intent);
-                    finish();
+        edtAddress.setOnKeyListener((view, i, keyEvent) -> {
+            if (i == KeyEvent.KEYCODE_ENTER || i == KeyEvent.KEYCODE_NUMPAD_ENTER) {
+                TMapPoint point;
+                try {
+                    point = Search.getPointFromAddress(edtAddress.getText().toString());
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
                 }
-                return false;
+
+                if (point == null) {
+                    Toast.makeText(LocationSearchActivity.this, "Location Not Found", Toast.LENGTH_SHORT).show();
+                    point = new TMapPoint(37.3793938, 126.9277183);
+                }
+
+                Intent intent = getIntent();
+                intent.putExtra("lat", point.getLatitude());
+                intent.putExtra("lon", point.getLongitude());
+                setResult(RESULT_OK, intent);
+                finish();
             }
+            return false;
         });
     }
 
     public class ArrayAdapter extends RecyclerView.Adapter<ArrayAdapter.ViewHolder> {
-        private ArrayList<String> mData = null;
+        private final ArrayList<String> mData;
 
         ArrayAdapter(ArrayList<String> list) {
             mData = list;
@@ -100,17 +97,14 @@ public class LocationSearchActivity extends AppCompatActivity {
             public ViewHolder(@NonNull View itemView) {
                 super(itemView);
 
-                itemView.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        int pos = getAdapterPosition();
+                itemView.setOnClickListener(view -> {
+                    int pos = getAdapterPosition();
 
-                        if (pos == RecyclerView.NO_POSITION) {
-                            return;
-                        }
-
-                        edtAddress.setText(mData.get(pos));
+                    if (pos == RecyclerView.NO_POSITION) {
+                        return;
                     }
+
+                    edtAddress.setText(mData.get(pos));
                 });
 
                 textView1 = itemView.findViewById(R.id.text1);

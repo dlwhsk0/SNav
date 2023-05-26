@@ -7,7 +7,7 @@
     tools:context=".RouteSearchActivity">
 
     <RelativeLayout
-        android:id="@+id/android_lar"
+        android:id="@+id/btnStartRoute"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:background="@drawable/route_search"
