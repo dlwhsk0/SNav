@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -41,7 +42,18 @@ public class LocationSearchActivity extends AppCompatActivity {
             @Override
             public boolean onKey(View view, int i, KeyEvent keyEvent) {
                 if (i == KeyEvent.KEYCODE_ENTER || i == KeyEvent.KEYCODE_NUMPAD_ENTER) {
-                    TMapPoint point = Search.getPointFromAddress(edtAddress.getText().toString());
+                    TMapPoint point = null;
+                    try {
+                        point = Search.getPointFromAddress(edtAddress.getText().toString());
+                    } catch (InterruptedException e) {
+                        throw new RuntimeException(e);
+                    }
+
+                    if (point == null) {
+                        Toast.makeText(LocationSearchActivity.this, "Location Not Found", Toast.LENGTH_SHORT).show();
+                        point = new TMapPoint(37.3793938, 126.9277183);
+                    }
+
                     Intent intent = getIntent();
                     intent.putExtra("lat", point.getLatitude());
                     intent.putExtra("lon", point.getLongitude());

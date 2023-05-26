@@ -12,7 +12,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -142,12 +141,10 @@ public class MainNavActivity extends AppCompatActivity implements TMapGpsManager
 
         if (requestCode == 0) {
             if (data == null) {
-                Toast.makeText(this, String.format("%d", requestCode), Toast.LENGTH_SHORT).show();
                 return;
             }
             double lat = data.getDoubleExtra("lat", 0);
             double lon = data.getDoubleExtra("lon", 0);
-            Toast.makeText(getApplicationContext(), String.format("%f %f", lat, lon), Toast.LENGTH_SHORT).show();
             gpsLocation = false;
             tMapView.setCenterPoint(lon, lat, true);
         }

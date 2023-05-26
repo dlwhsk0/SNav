@@ -1,6 +1,7 @@
 package com.sku.snav;
 
 import android.util.Base64;
+import android.util.Log;
 
 import com.skt.Tmap.TMapPoint;
 
@@ -27,7 +28,7 @@ public class Search {
             @Override
             public void run() {
                 try {
-                    URL url = new URL(String.format(Locale.KOREAN, "http://osm-oracle.kro.kr:8600/%f/%f/%f/%f", startX, startY, endX, endY));
+                    URL url = new URL(String.format(Locale.KOREAN, "http://osm-oracle.kro.kr:8410/%f/%f/%f/%f", startX, startY, endX, endY));
                     HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                     connection.setRequestMethod("GET");
                     connection.setDoOutput(true);
@@ -53,6 +54,8 @@ public class Search {
             }
         }.start();
 
+        android.os.SystemClock.sleep(2000);
+
         return route[0];
     }
 
@@ -62,7 +65,7 @@ public class Search {
             @Override
             public void run() {
                 try {
-                    URL url = new URL("http://osm-oracle.kro.kr:8600/recent/foo");
+                    URL url = new URL("http://osm-oracle.kro.kr:8410/recent/foo");
                     HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                     connection.setRequestMethod("GET");
                     connection.setDoOutput(true);
@@ -75,23 +78,24 @@ public class Search {
                         lines.add(result);
                     }
                 } catch (IOException e) {
-                    throw new RuntimeException(e);
                 }
             }
-        };
+        }.start();
+
+        android.os.SystemClock.sleep(2000);
 
         return lines;
     }
 
-    public static TMapPoint getPointFromAddress(String address) {
+    public static TMapPoint getPointFromAddress(String address) throws InterruptedException {
         final TMapPoint[] point = new TMapPoint[1];
-        point[0] = new TMapPoint(37.3793938, 126.9277183);
+        point[0] = null;
         new Thread() {
             @Override
             public void run() {
                 try {
-                    byte[] bytes = Base64.encode(address.getBytes(), Base64.URL_SAFE);
-                    URL url = new URL("http://osm-oracle.kro.kr:8600/geo/" + new String(bytes));
+                    byte[] bytes = Base64.encode(address.getBytes(), Base64.DEFAULT);
+                    URL url = new URL("http://osm-oracle.kro.kr:8410/geo/" + new String(bytes));
                     HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                     connection.setRequestMethod("GET");
                     connection.setDoOutput(true);
@@ -101,15 +105,15 @@ public class Search {
                     InputStream is = connection.getInputStream();
                     BufferedReader br = new BufferedReader(new InputStreamReader(is, StandardCharsets.UTF_8));
                     result = br.readLine();
-                    String[] arr = result.split(" ");
+                    Log.i("TAG", result);
+                    String[] arr = result.split("\\s");
                     point[0] = new TMapPoint(Double.parseDouble(arr[0]), Double.parseDouble(arr[1]));
-
                 } catch (IOException e) {
-                    throw new RuntimeException(e);
                 }
             }
         }.start();
-
+        android.os.SystemClock.sleep(2000);
+        Log.i("TAG", String.valueOf(point[0].getLatitude()));
         return point[0];
     }
 
@@ -119,8 +123,8 @@ public class Search {
             @Override
             public void run() {
                 try {
-                    byte[] bytes = Base64.encode(poi_name.getBytes(), Base64.URL_SAFE);
-                    URL url = new URL(String.format(Locale.KOREAN, "http://osm-oracle.kro.kr:8600/poi/%s", new String(bytes)));
+                    byte[] bytes = Base64.encode(poi_name.getBytes(), Base64.DEFAULT);
+                    URL url = new URL(String.format(Locale.KOREAN, "http://osm-oracle.kro.kr:8410/poi/%s", new String(bytes)));
                     HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                     connection.setRequestMethod("GET");
                     connection.setDoOutput(true);
@@ -145,6 +149,8 @@ public class Search {
                 }
             }
         }.start();
+
+        android.os.SystemClock.sleep(2000);
 
         return jsonObjects[0];
     }
