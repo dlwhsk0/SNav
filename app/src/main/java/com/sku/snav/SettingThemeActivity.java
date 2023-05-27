@@ -15,12 +15,7 @@ public class SettingThemeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting_theme);
 
-        backBtn = (Button) findViewById(R.id.backbtn);
-        backBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-            }
-        });
+        backBtn = findViewById(R.id.backbtn);
+        backBtn.setOnClickListener(view -> finish());
     }
 }

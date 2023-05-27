@@ -14,13 +14,10 @@ public class IntroActivity extends AppCompatActivity {
         setContentView(R.layout.activity_intro);
 
         Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                //딜레이 후 시작할 코드
-                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
-                startActivity(intent);
-            }
+        handler.postDelayed(() -> {
+            //딜레이 후 시작할 코드
+            Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+            startActivity(intent);
         }, 3000); // 3초 정도 딜레이를 준 후 시작
     }
 }

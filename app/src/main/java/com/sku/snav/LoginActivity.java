@@ -6,8 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -20,7 +19,7 @@ public class LoginActivity extends Activity {
             Manifest.permission.ACCESS_COARSE_LOCATION,
             Manifest.permission.INTERNET,
     };
-    Button kakaoBtn, faceBtn, naverBtn, googleBtn, guestBtn;
+    ImageButton kakaoBtn, faceBtn, naverBtn, googleBtn, guestBtn;
 
     public boolean runtimeCheckPermission(Context context, String... permissions) {
         if (context != null && permissions != null) {
@@ -48,41 +47,18 @@ public class LoginActivity extends Activity {
             requestPermissions(PERMISSIONS, 101);
         }
 
-        kakaoBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "카카오 로그인 성공", Toast.LENGTH_SHORT).show();
-            }
-        });
+        kakaoBtn.setOnClickListener(view -> Toast.makeText(getApplicationContext(), "카카오 로그인 성공", Toast.LENGTH_SHORT).show());
 
-        faceBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "페이스북 로그인 성공", Toast.LENGTH_SHORT).show();
-            }
-        });
+        faceBtn.setOnClickListener(view -> Toast.makeText(getApplicationContext(), "페이스북 로그인 성공", Toast.LENGTH_SHORT).show());
 
-        naverBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "네이버 로그인 성공", Toast.LENGTH_SHORT).show();
-            }
-        });
+        naverBtn.setOnClickListener(view -> Toast.makeText(getApplicationContext(), "네이버 로그인 성공", Toast.LENGTH_SHORT).show());
 
-        googleBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "구글 로그인 성공", Toast.LENGTH_SHORT).show();
-            }
-        });
+        googleBtn.setOnClickListener(view -> Toast.makeText(getApplicationContext(), "구글 로그인 성공", Toast.LENGTH_SHORT).show());
 
-        guestBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "게스트로 로그인 성공", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(getApplicationContext(), MainNavActivity.class);
-                startActivity(intent);
-            }
+        guestBtn.setOnClickListener(view -> {
+            Toast.makeText(getApplicationContext(), "게스트로 로그인 성공", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(getApplicationContext(), MainNavActivity.class);
+            startActivity(intent);
         });
     }
 

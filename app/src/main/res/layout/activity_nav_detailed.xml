@@ -4,17 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NavDetailedActivity">
+    android:orientation="vertical"
+    tools:context=".MainNavFavoriteActivity">
+
+    <com.skt.Tmap.TMapView
+        android:id="@+id/tmapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:layout_width="373dp"
+        android:layout_height="77dp"
+        android:background="@drawable/nav_detailed_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <RelativeLayout
-        android:id="@+id/android_lar"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:background="@drawable/nav_detailed"
+        android:id="@+id/btnStartRoute"
+        android:layout_width="411dp"
+        android:layout_height="500dp"
+        android:background="@drawable/nav_detailed_bottom"
         android:clipToOutline="true"
-        tools:ignore="MissingConstraints,RedundantNamespace,UnusedAttribute">
-
-
-    </RelativeLayout>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints,RedundantNamespace,UnusedAttribute" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

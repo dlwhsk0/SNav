@@ -1,52 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainNavMenuActivity">
+    tools:context=".MainNavActivity">
 
-    <RelativeLayout
-        android:id="@+id/android_lar"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+    <com.skt.Tmap.TMapView
+        android:id="@+id/tmapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/addressLayout"
+        android:layout_width="373dp"
+        android:layout_height="117dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/green_box"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/black_lens" />
+
+        <TextView
+            android:id="@+id/edtAddress"
+            android:layout_width="0dp"
+            android:layout_height="95dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:layout_weight="5"
+            android:background="@drawable/gray_address_box"
+            android:gravity="center"
+            android:text="장소 또는 주소를 입력하세요"
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:textSize="34sp" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/startMenu"
+        android:layout_width="373dp"
+        android:layout_height="426dp"
+        android:layout_marginBottom="24dp"
         android:background="@drawable/main_nav_menu"
-        android:clipToOutline="true"
-        tools:ignore="MissingConstraints,RedundantNamespace,UnusedAttribute">
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent">
 
         <Button
-            android:id="@+id/routebtn"
-            android:layout_width="292dp"
-            android:layout_height="80dp"
-            android:layout_marginLeft="60dp"
-            android:layout_marginTop="410dp"
-            android:background="#00ff0000" />
+            android:id="@+id/btnFindRoute"
+            android:layout_width="285dp"
+            android:layout_height="82dp"
+            android:layout_marginTop="32dp"
+            android:background="#00FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/surbtn"
-            android:layout_width="292dp"
-            android:layout_height="80dp"
-            android:layout_marginLeft="60dp"
-            android:layout_marginTop="507dp"
-            android:background="#00ff0000" />
+            android:id="@+id/btnFindSurround"
+            android:layout_width="285dp"
+            android:layout_height="82dp"
+            android:layout_marginTop="128dp"
+            android:background="#00FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/favbtn"
-            android:layout_width="292dp"
-            android:layout_height="80dp"
-            android:layout_marginTop="600dp"
-            android:layout_marginLeft="60dp"
-            android:background="#00ff0000" />
+            android:id="@+id/btnFavorite"
+            android:layout_width="285dp"
+            android:layout_height="82dp"
+            android:layout_marginTop="224dp"
+            android:background="#00FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/setbtn"
-            android:layout_width="294dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="698dp"
-            android:layout_marginLeft="59dp"
-            android:background="#00ff0000" />
+            android:id="@+id/btnSetting"
+            android:layout_width="284dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="316dp"
+            android:background="#00FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    </RelativeLayout>
+        <Button
+            android:id="@+id/btnReturn"
+            android:layout_width="348dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="360dp"
+            android:background="#00FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-</LinearLayout>
+    <Button
+        android:id="@+id/btnGPSLocation"
+        android:layout_width="61dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="20dp"
+        android:text="위치"
+        app:layout_constraintEnd_toEndOf="@+id/addressLayout"
+        app:layout_constraintTop_toBottomOf="@+id/addressLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

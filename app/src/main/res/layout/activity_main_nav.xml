@@ -18,7 +18,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
-        android:background="@drawable/main_nav_search"
+        android:background="@drawable/green_box"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,83 +47,17 @@
             android:textSize="34sp" />
     </LinearLayout>
 
-    <FrameLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="#FFFFFF"
-        android:padding="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/startButton"
-        app:layout_constraintEnd_toEndOf="@+id/startButton"
-        app:layout_constraintStart_toStartOf="@+id/startButton">
-
-        <LinearLayout
-            android:id="@+id/menuLayout"
-            android:layout_width="330dp"
-            android:layout_height="wrap_content"
-            android:background="#FFFFFF"
-            android:orientation="vertical"
-            android:padding="10dp"
-            android:visibility="visible">
-
-            <Button
-                android:id="@+id/btnFindRoad"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="길 찾기" />
-
-            <Button
-                android:id="@+id/btnFindSurround"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="주변 시설" />
-
-            <Button
-                android:id="@+id/btnFavorite"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="즐겨찾기" />
-
-            <Button
-                android:id="@+id/btnSetting"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="설정" />
-        </LinearLayout>
-    </FrameLayout>
-
     <LinearLayout
-        android:id="@+id/startButton"
-        android:layout_width="351dp"
-        android:layout_height="102dp"
+        android:id="@+id/startMenu"
+        android:layout_width="373dp"
+        android:layout_height="139dp"
         android:layout_marginBottom="24dp"
-        android:background="@drawable/purple_box"
+        android:background="@drawable/map_start_button"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <ImageView
-            android:id="@+id/imgArrow"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/arrow_up" />
-
-        <TextView
-            android:id="@+id/textStart"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="10dp"
-            android:layout_weight="4"
-            android:text="시작하기"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="34sp" />
-    </LinearLayout>
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnGPSLocation"
